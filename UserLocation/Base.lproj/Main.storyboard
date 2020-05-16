@@ -16,25 +16,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jXF-4m-WC3">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pin" translatesAutoresizingMaskIntoConstraints="NO" id="zyq-RA-ZpJ">
+                                <rect key="frame" x="187" y="391" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="1oj-1a-6BX"/>
+                                    <constraint firstAttribute="height" constant="40" id="NTo-Ge-2bx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQj-TM-XSW">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JaM-Xc-If1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="jXF-4m-WC3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="17j-N9-ag2"/>
-                            <constraint firstAttribute="bottom" secondItem="jXF-4m-WC3" secondAttribute="bottom" id="oun-Wo-FEl"/>
+                            <constraint firstItem="zyq-RA-ZpJ" firstAttribute="centerY" secondItem="jXF-4m-WC3" secondAttribute="centerY" constant="-20" id="CeJ-8n-Hvr"/>
+                            <constraint firstAttribute="trailing" secondItem="gQj-TM-XSW" secondAttribute="trailing" id="QH9-2r-lM4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gQj-TM-XSW" secondAttribute="bottom" id="RSj-Qy-OuG"/>
+                            <constraint firstItem="zyq-RA-ZpJ" firstAttribute="centerX" secondItem="jXF-4m-WC3" secondAttribute="centerX" id="T2x-GE-BT5"/>
+                            <constraint firstItem="gQj-TM-XSW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TK0-sh-1pZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jXF-4m-WC3" secondAttribute="bottom" id="UWv-ap-QjR"/>
                             <constraint firstAttribute="trailing" secondItem="jXF-4m-WC3" secondAttribute="trailing" id="qkS-Q8-Y7p"/>
                             <constraint firstItem="jXF-4m-WC3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vdL-ao-fmf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="gQj-TM-XSW" id="tor-Al-w3q"/>
                         <outlet property="mapView" destination="jXF-4m-WC3" id="N52-Ji-bnX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="127"/>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Pin" width="16" height="46"/>
+    </resources>
 </document>
