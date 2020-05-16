@@ -14,6 +14,7 @@ class MapScreen: UIViewController {
 
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var goButton: UIButton!
     
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 10000
@@ -25,7 +26,7 @@ class MapScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //goButton.layer.cornerRadius = goButton.frame.size.height/2
+        goButton.layer.cornerRadius = goButton.frame.size.height / 2
         mapView.delegate = self
         checkLocationServices()
     }
@@ -130,9 +131,9 @@ class MapScreen: UIViewController {
         directionsArray.append(directions)
         let _ = directionsArray.map { $0.cancel() }
     }
-    
-    
-    @objc func goButtonTapped() {
+        
+
+    @IBAction func goButtonTapped(_ sender: Any) {
         getDirections()
     }
 }
@@ -186,7 +187,6 @@ extension MapScreen: MKMapViewDelegate {
             
             DispatchQueue.main.async {
                 self.addressLabel.text = "\(streetNumber) \(streetName)"
-                print(self.addressLabel.text ?? "No text")
             }
         }
     }
@@ -194,7 +194,7 @@ extension MapScreen: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay as! MKPolyline)
-        renderer.strokeColor = .blue
+        renderer.strokeColor = .systemBlue
         
         return renderer
     }

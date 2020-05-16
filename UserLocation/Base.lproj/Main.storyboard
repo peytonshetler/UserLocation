@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="height" constant="40" id="NTo-Ge-2bx"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQj-TM-XSW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQj-TM-XSW">
                                 <rect key="frame" x="0.0" y="812" width="414" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -35,11 +35,28 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z71-AV-Ieg">
+                                <rect key="frame" x="314" y="722" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9kA-1w-ebQ"/>
+                                    <constraint firstAttribute="width" constant="60" id="Veb-Qp-gw4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QKc-yK-l81"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="jXF-4m-WC3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="17j-N9-ag2"/>
                             <constraint firstItem="zyq-RA-ZpJ" firstAttribute="centerY" secondItem="jXF-4m-WC3" secondAttribute="centerY" constant="-20" id="CeJ-8n-Hvr"/>
+                            <constraint firstAttribute="trailing" secondItem="Z71-AV-Ieg" secondAttribute="trailing" constant="40" id="HNM-e7-jbf"/>
+                            <constraint firstItem="gQj-TM-XSW" firstAttribute="top" secondItem="Z71-AV-Ieg" secondAttribute="bottom" constant="30" id="Mcg-5Y-FIK"/>
                             <constraint firstAttribute="trailing" secondItem="gQj-TM-XSW" secondAttribute="trailing" id="QH9-2r-lM4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gQj-TM-XSW" secondAttribute="bottom" id="RSj-Qy-OuG"/>
                             <constraint firstItem="zyq-RA-ZpJ" firstAttribute="centerX" secondItem="jXF-4m-WC3" secondAttribute="centerX" id="T2x-GE-BT5"/>
@@ -52,6 +69,7 @@
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="gQj-TM-XSW" id="tor-Al-w3q"/>
+                        <outlet property="goButton" destination="Z71-AV-Ieg" id="zxj-Bs-bXp"/>
                         <outlet property="mapView" destination="jXF-4m-WC3" id="N52-Ji-bnX"/>
                     </connections>
                 </viewController>
